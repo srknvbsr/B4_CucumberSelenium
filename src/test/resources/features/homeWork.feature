@@ -1,3 +1,4 @@
+@regression
 Feature: Demoqa Menu Checks
 
   Background:

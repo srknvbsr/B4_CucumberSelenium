@@ -1,4 +1,5 @@
 @regression
+  @navigation
 Feature: Navigation Menu Tests
   #Task
   #

@@ -1,5 +1,7 @@
 package com.kraftech.pages;
 
+import com.kraftech.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -32,11 +34,22 @@ public class EditProfilePage extends BasePage {
         Select select = new Select(jobInputBox);
         select.selectByVisibleText(jobOption);
     }
+    public void editProfilInfo(String inputBoxName,String userInformation){
+        WebElement inputbox = Driver.get().findElement(By.name(inputBoxName));
+        inputbox.clear();
+        inputbox.sendKeys(userInformation);
+    }
 
 
-    public String getSelectedJob(){
+    public String getSelectedJob(String job){
         Select select = new Select(jobInputBox);
         return select.getFirstSelectedOption().getText();
     }
+    public void editProfileInfo(String inputBoxName,String userInformation){
+        WebElement inputBox = Driver.get().findElement(By.name(inputBoxName));
+        inputBox.clear();
+        inputBox.sendKeys(userInformation);
+    }
+
 }
 

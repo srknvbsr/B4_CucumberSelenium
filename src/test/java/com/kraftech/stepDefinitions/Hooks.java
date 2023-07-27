@@ -13,7 +13,6 @@ public class Hooks {
 
     @Before(order = 0)
     public void setUp() {
-
         //System.out.println("This is coming from before method");
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);

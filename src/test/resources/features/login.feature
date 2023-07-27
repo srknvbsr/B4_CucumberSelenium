@@ -3,7 +3,8 @@ Feature: Kraftech Login Test
 
   # Agile Story: As a user I should be able to login with credentials
 
-  Background: Given The user is on the login page
+  Background:
+    Given The user is on the login page
 
   @teacher @login
   Scenario: Login as a teacher
@@ -13,7 +14,7 @@ Feature: Kraftech Login Test
 
   @student @login
   Scenario: Login as a student
-    Given The user is on the login page
+   # Given The user is on the login page
     When The user enters student credentials
     Then The user should be able to login
 

@@ -1,5 +1,6 @@
 package com.kraftech.pages;
 import com.kraftech.utilities.Driver;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +25,10 @@ public class UserProfilePage extends BasePage {
     }
 
     public String updateMessageGetText() {
+
         return updateMessage.getText();
     }
+
+
 
 }

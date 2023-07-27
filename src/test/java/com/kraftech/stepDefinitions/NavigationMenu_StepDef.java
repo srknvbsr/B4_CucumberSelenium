@@ -2,6 +2,7 @@ package com.kraftech.stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class NavigationMenu_StepDef {
     @When("Login as Mike")
@@ -48,6 +49,7 @@ public class NavigationMenu_StepDef {
     @When("The go to My profil Menu")
     public void theGoToMyProfilMenu() {
         System.out.println("Go to My Profil Menu");
+
 
     }
 

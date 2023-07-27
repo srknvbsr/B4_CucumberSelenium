@@ -1,6 +1,7 @@
 package com.kraftech.stepDefinitions;
 
 import com.kraftech.pages.LoginPage;
+import com.kraftech.utilities.BrowserUtils;
 import com.kraftech.utilities.ConfigurationReader;
 import com.kraftech.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -70,4 +71,13 @@ public class Login_StepDefs {
         Assert.assertEquals(expected,actual);
 
     }
+    @Then("Validate that warning message is {string}")
+    public void validate_that_warning_message_is(String expectedMessage) {
+        BrowserUtils.waitFor(1);
+        String actualWarningMessageText = loginPage.getWarningMessageText(expectedMessage);
+        Assert.assertEquals(expectedMessage,actualWarningMessageText);
+
+    }
+
+
 }

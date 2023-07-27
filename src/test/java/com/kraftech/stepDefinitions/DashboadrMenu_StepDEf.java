@@ -6,9 +6,6 @@ import com.kraftech.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +13,7 @@ public class DashboadrMenu_StepDEf {
     DashboardPage dashboardPage = new DashboardPage();
     LoginPage loginPage = new LoginPage();
 
-    @Then("The user should be able to see follow menu")
+    @Then("The user should be able to see following menu")
     public void the_user_should_be_able_to_see_follow_menu(List<String> expectedList) {
 
         System.out.println("expectedList.size() = " + expectedList.size());

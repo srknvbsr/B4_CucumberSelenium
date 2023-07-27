@@ -1,3 +1,4 @@
+@regression
 @c_listAndMap
 
 Feature: Dashboard Menu Checks
@@ -10,7 +11,7 @@ Feature: Dashboard Menu Checks
     #Given The user is on the login page
     When The user logs in using "maho@hotmail.com" and "Maho123456789"
     Then The user should be able to login
-    And The user should be able to see follow menu
+    And The user should be able to see following menu
       | Dashboard  |
       | Developers |
       | Components |
@@ -27,7 +28,7 @@ Feature: Dashboard Menu Checks
       | password | Maho123456789    |
       | name     | maho             |
     Then The user should be able to login
-    And The user should be able to see follow menu
+    And The user should be able to see following menu
       | Dashboard  |
       | Developers |
       | Components |
@@ -51,9 +52,30 @@ Feature: Dashboard Menu Checks
       | Add Education   |
       | Change Password |
 
-    # Class Task f2 HW
-    # go to web page -> https://demoqa.com/
-    # verify that user see following menu list elements, forms,...Text Box
+  # day 5 Class Task f3
+  # example 2 with scenario outline
+  # use 3 different user credentials
+  @c_dataTable_S_outline
+  Scenario Outline: Example -2 for <name> Scenario Outline
+    When The user logs in using following menu
+      | username | <userEmail> |
+      | password | <password>  |
+      | name     | <name>      |
+    Then The user should be able to login
+    And The user should be able to see following menu
+      | Dashboard  |
+      | Developers |
+      | Components |
+      | Forms      |
+      | JavaScript |
+      | <name>     |
+    Examples:
+      | userEmail        | password  | name         |
+      | mike@gmail.com   | mike1234  | mike         |
+      | john@gmail.com   | John1234. | John         |
+      | eddiem@kraft.com | eddiem12  | Eddie Murphy |
+
+
 
 
 
