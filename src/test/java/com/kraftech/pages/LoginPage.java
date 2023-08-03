@@ -55,4 +55,5 @@ public class LoginPage extends BasePage {
     public String getWarningMessageText(String message){
         return Driver.get().findElement(By.xpath("//div[contains(text(),'"+message+"')]")).getText();
     }
+
 }

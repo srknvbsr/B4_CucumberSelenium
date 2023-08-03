@@ -44,9 +44,9 @@ public abstract class BasePage {
         return userAccountName.getText();
     }
 
-    public Map<String, String> getDataList(String sheetName, Map<String, String> datalist) {
-        ExcelUtil excelUtil = new ExcelUtil("src/test/resources/KT_B4 DDF test.xlsx", sheetName);
+    public List<Map<String, String>> getDataList(String sheetName){
+        ExcelUtil excelUtil=new ExcelUtil("src/test/resources/KT_B4_DDF_test.xlsx",sheetName);
         List<Map<String, String>> dataList = excelUtil.getDataList();
-        return datalist;
+        return dataList;
     }
 }
