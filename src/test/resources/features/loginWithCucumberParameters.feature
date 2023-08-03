@@ -1,7 +1,7 @@
 @regression
 Feature: Login tests with cucumber parameters
 
-  @mikeParameter @parameterizeMethod
+  @Grid
   Scenario: Login with Mike - Cucumber parameters
     Given The user is on the login page
     When The user logs in using "mike@gmail.com" and "mike1234"
@@ -9,7 +9,7 @@ Feature: Login tests with cucumber parameters
     Then Validate that username is "mike"
 
     #John
-  @JohnParameter @parameterizeMethod
+  @Grid
   Scenario: Login with John-Cucumber Parameter
     Given The user is on the login page
     When The user logs in using "john@gmail.com" and "John1234."
